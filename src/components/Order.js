@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
-
+import Side from "./Side"
 class Order extends Component {
   state = {
     isClicked: false
   }
 
   handleClick = () => {
-    this.state.isClicked = !this.state.isClicked
+    this.setState({
+      isClicked: !this.state.clicked
+    })
   }
 
   render() {
+    console.log(this)
     return (
       <div className="ui centered raised card">
         <div className="image">
