@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 
 const ToppingForm = (props) => {
+  console.log(props.toppings)
   return (
     <Fragment>
       <h1><label htmlFor="toppings">Toppings</label></h1>
@@ -13,8 +14,7 @@ const ToppingForm = (props) => {
               value="Mild Hot Sauce"
               name="toppings"
               checked={ props.toppings.includes('Mild Hot Sauce') }
-              onChange={ props.handleChange }
-            />
+              onChange={ props.handleOnChange }            />
             <img src={ require('../images/toppings/mild.png') } height="100px" width="100px" alt="mild hot sauce" />
             <label htmlFor="mild">Mild Hot Sauce</label>
           </div>
@@ -28,8 +28,7 @@ const ToppingForm = (props) => {
               value="Medium Hot Sauce"
               name="toppings"
               checked={ props.toppings.includes('Medium Hot Sauce') }
-              onChange={ props.handleChange }
-            />
+              onChange={ props.handleOnChange }            />
             <img src={ require('../images/toppings/medium.png') } height="100px" width="100px" alt="medium hot sauce" />
             <label htmlFor="medium">Medium Hot Sauce</label>
           </div>
@@ -43,8 +42,7 @@ const ToppingForm = (props) => {
               value="HOT Hot Sauce"
               name="toppings"
               checked={ props.toppings.includes('HOT Hot Sauce') }
-              onChange={ props.handleChange }
-            />
+              onChange={ props.handleOnChange }            />
             <img src={ require('../images/toppings/hot.png') } height="100px" width="100px" alt="hot sauce" />
             <label htmlFor="hot">HOT Hot Sauce</label>
           </div>
@@ -58,8 +56,7 @@ const ToppingForm = (props) => {
               value="Corn Salsa"
               name="toppings"
               checked={ props.toppings.includes('Corn Salsa') }
-              onChange={ props.handleChange }
-            />
+              onChange={ props.handleOnChange }            />
             <img src={ require('../images/toppings/corn-salsa.png') } height="100px" width="100px" alt="corn salsa" />
             <label htmlFor="corn">Corn Salsa</label>
           </div>
@@ -73,8 +70,7 @@ const ToppingForm = (props) => {
               value="Sour Cream"
               name="toppings"
               checked={ props.toppings.includes('Sour Cream') }
-              onChange={ props.handleChange }
-            />
+              onChange={ props.handleOnChange }            />
             <img src={ require('../images/toppings/sour-cream.png') } height="100px" width="100px" alt="sour cream" />
             <label htmlFor="sour cream">Sour Cream</label>
           </div>
@@ -88,8 +84,7 @@ const ToppingForm = (props) => {
               value="Lettuce"
               name="toppings"
               checked={ props.toppings.includes('Lettuce') }
-              onChange={ props.handleChange }
-            />
+              onChange={ props.handleOnChange }            />
             <img src={ require('../images/toppings/lettuce.png') } height="100px" width="100px" alt="lettuce" />
             <label htmlFor="lettuce">Lettuce</label>
           </div>
@@ -103,8 +98,7 @@ const ToppingForm = (props) => {
               value="Guac"
               name="toppings"
               checked={ props.toppings.includes('Guac') }
-              onChange={ props.handleChange }
-            />
+              onChange={ props.handleOnChange }            />
             <img src={ require('../images/toppings/guac.png') } height="100px" width="100px" alt="guacamole" />
             <label htmlFor="guac">Guac</label>
           </div>
@@ -118,8 +112,7 @@ const ToppingForm = (props) => {
               value="Cheese"
               name="toppings"
               checked={ props.toppings.includes('Cheese') }
-              onChange={ props.handleChange }
-            />
+              onChange={ props.handleOnChange }            />
             <img src={ require('../images/toppings/cheese.png') } height="100px" width="100px" alt="cheese" />
             <label htmlFor="cheese">Cheese</label>
           </div>

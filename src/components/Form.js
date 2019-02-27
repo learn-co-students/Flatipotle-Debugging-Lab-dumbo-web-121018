@@ -16,17 +16,31 @@ class Form extends Component {
     ...DEFAULT_STATE
   }
 
-  handleSubmit() {
-    event.preventDefault()
-    document.getElementById("order-form").reset()
-    this.props.addOrder(this.state)
+  // handleSubmit = event => {
+  //   console.log(this.state)
+  //   // debugger;
+  //   event.preventDefault()
+    
+  //   document.getElementById("order-form").reset()
+  //   // this.props.addOrder(this.state)
 
-    this.setState({
-      ...DEFAULT_STATE
-    })
-  }
+  // //   this.setState({
+  // //     protein: this.state.protein,
+  // //  fillings: this.state.fillings,
+  // //  toppings: this.state.topppings,
+  // //  sides: this.state.sides
+  // //   })
+  // }
+  onSubmit = (event) => {
+event.preventDefault()
+    console.log("hiii",this)
+    // debugger;
+    let passUp = this.state
+    this.props.onSubmit(passUp)
 
-  handleChange() {
+  };
+  handleChange = event => {
+    // console.log(event)
     const itemType = event.target.name
     const item = event.target.value
 
@@ -43,13 +57,14 @@ class Form extends Component {
   }
 
   render() {
+    console.log(this)
     return(
       <div className="ui raised container segment">
         <h1 className="ui block header">Order Form</h1>
-        <form className="ui form" id="order-form" onSubmit={ this.handleSubmit }>
+        <form className="ui form" id="order-form" onSubmit={this.onSubmit}>
           <ProteinForm
             protein={ this.state.protein }
-            handleOnChange={ this.handleChange }
+            handleOnChange={this.handleChange}
           />
 
           <FillingForm
