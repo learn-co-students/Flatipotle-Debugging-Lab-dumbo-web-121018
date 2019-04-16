@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-const SideForm = (props) => {
+export const SideForm = (props) => {
   return (
     <Fragment>
       <h1><label htmlFor="sides">Sides</label></h1>
